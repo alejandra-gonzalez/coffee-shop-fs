@@ -97,7 +97,7 @@ def update_drink(jwt, id):
     
     req = request.get_json()
     if 'title' in req:
-        drink.title = data['title']
+        drink.title = req['title']
     if 'recipe' in req:
         drink.recipe = json.dumps(req['recipe'])
     drink.update()
